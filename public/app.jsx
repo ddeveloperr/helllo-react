@@ -1,3 +1,27 @@
+var GreeterMessage = React.createClass({
+    render: function(){
+        return(
+            <div>
+              <h1>Some h1</h1>
+              <p>Some paragraph</p>
+            </div>
+            );
+    }
+});
+
+var GreeterForm = React.createClass({
+    render: function(){
+        return(
+            
+              <form>
+                <input type="text" ref="name"/>
+                <button>Set name</button>
+              </form>
+             
+            );
+    }
+});
+
 var Greeter = React.createClass({
     
     getDefaultProps: function(){
@@ -27,8 +51,6 @@ var Greeter = React.createClass({
         });    
         }
         
-        
-
     },
     
     render: function() {
@@ -39,11 +61,15 @@ var Greeter = React.createClass({
               <h1> Hello {name} called from React Component! </h1>
               <p>{message + "!!!"}</p>
               
+              <GreeterMessage />
+              
+              
               <form onSubmit={this.onButtonClick}>
                 <input type="text" ref="name"/>
                 <button>Set name</button>
               </form>
               
+              <GreeterForm />
             </div> 
             );
     } 
