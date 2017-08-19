@@ -38,11 +38,10 @@ var GreeterForm = React.createClass({
         return(
             
               <form onSubmit = {this.onFormSubmit} >
+              
               <div><input type="text" ref="name" placeholder="Enter name"/></div>
               <div><textarea ref="message" placeholder="Enter message"></textarea></div>
               <div><button>Submit</button></div>
-                
-                
                 
               </form>
              
@@ -67,7 +66,7 @@ var Greeter = React.createClass({
     },
     
     handleNewData: function(updates){
-        this.setState(updates);
+        this.setState(updates); 
     },
     
     render: function() {
@@ -75,7 +74,6 @@ var Greeter = React.createClass({
         var message = this.state.message;
         return(
             <div>
-
               <GreeterMessage name = {name} message = {message}/>
               <GreeterForm onNewData = {this.handleNewData}/>
             </div> 
