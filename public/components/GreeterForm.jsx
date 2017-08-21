@@ -35,3 +35,5 @@ var GreeterForm = React.createClass({
             );
     }
 });
+
+module.exports = GreeterForm;
