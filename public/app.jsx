@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Greeter = require('./components/Greeter');
+var Greeter = require('Greeter');
 
 let firstName = 'Kemal';
 let myMessage = "I'm so happy to learn React.js so fast!";
